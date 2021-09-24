@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Arriendos</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-
+alpha.6/css/bootstrap.min.css"
+	integrity="sha384-
+rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+	crossorigin="anonymous">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-
+alpha.6/js/bootstrap.min.js"
+	integrity="sha384-
+vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<ul class="nav justify-content-end">
+		<li class="nav-item"><a class="nav-link active" href="/">Alumnos</a></li>
+		<li class="nav-item"><a class="nav-link active"
+			href="/direccioneslista">Direcciones</a></li>
+		<li class="nav-item"><a class="nav-link active" href="/alumnos">Nuevo
+				Alumno</a></li>
+		<li class="nav-item"><a class="nav-link active"
+			href="/direcciones">Nueva Dirección</a></li>
+	</ul>
+	<div class="container">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<h3>Detalle</h3>
+			<table class="table">
+				<thead class="thead-light">
+					<tr>
+						<th scope="col">Calle</th>
+						<th scope="col">Numero</th>
+						<th scope="col">Ciudad</th>
+						<th scope="col">Tipo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="direcciones: ${direccion}">
+						<td th:text="${direcciones.calle}" />
+						<td th:text="${direcciones.numero}" />
+						<td th:text="${direcciones.ciudad}" />
+						<td th:text="${direcciones.tipo}" />
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-sm-2">
+			<p></p>
+		</div>
+	</div>
+</body>
+</html>

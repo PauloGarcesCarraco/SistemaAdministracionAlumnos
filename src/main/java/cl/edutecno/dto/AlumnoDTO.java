@@ -1,0 +1,25 @@
+package cl.edutecno.dto;
+
+import java.util.List;
+
+import cl.edutecno.model.Alumno;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class AlumnoDTO extends GenericDTO {
+	private List<Alumno>alumnos;
+
+	public AlumnoDTO(List<Alumno>alumnos, String mensaje, String codigo) {
+		super(mensaje, codigo);
+		this.alumnos=alumnos;
+	}
+	
+	
+
+}
